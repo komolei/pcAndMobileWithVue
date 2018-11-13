@@ -24,7 +24,7 @@
 <script>
 import vHeader from "components/header/header";
 import vLogin from "components/login/login";
-import { ImagePreview } from 'vant';
+import { ImagePreview } from "vant";
 export default {
   name: "index",
   components: {
@@ -38,11 +38,17 @@ export default {
   },
   methods: {
     handlerClick() {
-      console.log('xxxxxj');
-      ImagePreview([
-        "https://img.yzcdn.cn/1.jpg",
-        "https://img.yzcdn.cn/2.jpg"
-      ]);
+      console.log("xxxxxj");
+      // ImagePreview([
+      //   "https://img.yzcdn.cn/1.jpg",
+      //   "https://img.yzcdn.cn/2.jpg"
+      // ]);
+      const array = [1, 2, 3];
+      const [first, second] = array;
+      const newArray = array.map(item => item * 2);
+      console.log("first", first, newArray);
+      const newPr= Promise.resolve(3)
+      console.log('dafd',newPr);
     }
   }
 };

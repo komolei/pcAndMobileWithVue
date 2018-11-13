@@ -21,11 +21,12 @@ const createLintingRule = () => ({
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  entry: {
-    // app: './src/entry/back_end.js' // back_end_platform configure
-    // app: './src/entry/mobile_mint.js' // mobile configure mintUI
-    app: './src/entry/mobile_vant.js' // mobile configure vant
-  },
+  entry:['babel-polyfill','./src/entry/mobile_vant.js'],
+  // entry: {
+  //   // app: './src/entry/back_end.js' // back_end_platform configure
+  //   // app: './src/entry/mobile_mint.js' // mobile configure mintUI
+  //   app: './src/entry/mobile_vant.js' // mobile configure vant
+  // },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
